@@ -6,15 +6,12 @@
 
 <img src="assets/neofetch.svg" alt="neofetch: identity card" width="100%">
 
-#### `magomin~/dev $ ls -la ~/projects`
+<img src="assets/projects.svg" alt="ls -la ~/projects: selected work" width="100%">
 
-| file | description | tags | links |
-|---|---|---|---|
-| **re-track/** | Learn Ableton Live by rebuilding real songs. AI reverse-engineers a track and turns it into an interactive lesson verified against the live state of your set, not screenshots. | `python` `ableton` `open source` | [-> source](https://github.com/Magomin/re-track) |
-| **cadlan-ai-hub/** | Internal roadmap and tooling for bringing AI agents into an engineering team. | `next.js` `vercel` `private` | |
-| **interactive/** | My portfolio as a small 2D world you walk through. | `react` `kaplay` | [-> live](https://matdomi.vercel.app) · [-> source](https://github.com/Magomin/interactive) |
-| **fribl-outbound/** | B2B multichannel prospecting platform built solo in 2026: sequences, workflow builder, unified inbox, CRM, A/B tests. | `typescript` `next.js` `postgres` `private` | |
-| **FriblLinkedinScraper/** | Threaded LinkedIn profile scraper feeding an AI recruiting pipeline (2024). | `python` `archived` | [-> source](https://github.com/Magomin/FriblLinkedinScraper) |
+<a href="https://github.com/Magomin/re-track"><img src="assets/pill-re-track-source.svg" alt="re-track source"></a>
+<a href="https://matdomi.vercel.app"><img src="assets/pill-interactive-live.svg" alt="interactive live"></a>
+<a href="https://github.com/Magomin/interactive"><img src="assets/pill-interactive-source.svg" alt="interactive source"></a>
+<a href="https://github.com/Magomin/FriblLinkedinScraper"><img src="assets/pill-scraper-source.svg" alt="scraper source"></a>
 
 <img src="assets/stack.svg" alt="stack.txt: self-assessed proficiency bars" width="100%">
 

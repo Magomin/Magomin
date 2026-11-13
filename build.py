@@ -93,21 +93,37 @@ def header():
 
 def neofetch():
     H = 300
-    av = "\n".join(
+    body_lines = AVATAR[:-1]
+    av = "
+".join(
         f'<text x="70" y="{112+i*20}" font-size="17" fill="{G}" xml:space="preserve">{html.escape(l)}</text>'
-        for i, l in enumerate(AVATAR))
-    kv = "\n".join(
+        for i, l in enumerate(body_lines))
+    fy = 112 + len(body_lines) * 20
+    feet = (f'<g class="lf"><text x="70" y="{fy}" font-size="17" fill="{G}" xml:space="preserve">  ▀▀</text></g>'
+            f'<g class="rf"><text x="70" y="{fy}" font-size="17" fill="{G}" xml:space="preserve">       ▀▀</text></g>')
+    kv = "
+".join(
         f'<text x="340" y="{112+i*22}" font-size="15" xml:space="preserve"><tspan fill="{G}">{k:<8}</tspan><tspan fill="{AMB if k == "Status" else SAGE}">{html.escape(v)}</tspan></text>'
         for i, (k, v) in enumerate(NEOFETCH))
     sw = "".join(
         f'<rect x="{340+i*30}" y="{112+len(NEOFETCH)*22+2}" width="24" height="12" fill="{c}"/>'
         for i, c in enumerate(["#050805", "#ff5f56", G, AMB, "#5cf6ff", GD, GF, INK]))
+    # walk cycle: the whole figure grows toward the viewer and bobs, feet alternate big steps
+    style = '''
+  .walk, .bob, .lf, .rf { transform-box: fill-box; transform-origin: 50% 100%; }
+  .walk { animation: approach 4s ease-in infinite; }
+  .bob { animation: bob .6s ease-in-out infinite; }
+  .lf { animation: step .6s ease-in-out infinite; }
+  .rf { animation: step .6s ease-in-out -.3s infinite; }
+  @keyframes approach { 0% { transform: scale(.55); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: scale(1.25); opacity: 0; } }
+  @keyframes bob { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-5px) rotate(3deg); } }
+  @keyframes step { 0%,100% { transform: translateY(0) scaleY(1); } 50% { transform: translateY(-14px) scaleY(1.6); } }'''
     body = f'''<text class="ui" x="70" y="64" xml:space="preserve"><tspan fill="{SAGE}">magomin~/dev $</tspan> neofetch</text>
-<g filter="url(#glow)">{av}</g>
-<text x="70" y="{112+len(AVATAR)*20+6}" class="dim">magomin@dev</text>
+<g class="walk" filter="url(#glow)"><g class="bob">{av}</g>{feet}</g>
+<text x="70" y="{fy+26}" class="dim">magomin@dev</text>
 <text x="340" y="88" font-size="15" fill="{INK}" filter="url(#glow)">magomin@github</text><line x1="340" y1="94" x2="760" y2="94" stroke="{GF}"/>
 {kv}{sw}'''
-    return frame(H, "neofetch: identity card of Matthieu Dominguez", body)
+    return frame(H, "neofetch: identity card of Matthieu Dominguez", body, style)
 
 
 def stack():
@@ -124,6 +140,42 @@ def stack():
 <text class="dim" x="70" y="86">self-assessed, honest</text>
 {rows}'''
     return frame(H, "stack.txt: self-assessed proficiency bars", body)
+
+
+PROJECTS = [
+    ("re-track/", "Learn Ableton Live by rebuilding real songs. AI reverse-engineers a track into a lesson verified against your live set.", ["python", "ableton"], "open source"),
+    ("cadlan-ai-hub/", "Internal roadmap and tooling for bringing AI agents into an engineering team.", ["next.js", "vercel"], "private"),
+    ("interactive/", "My portfolio as a small 2D world you walk through.", ["react", "kaplay"], "live"),
+    ("fribl-outbound/", "B2B multichannel prospecting platform built solo in 2026: sequences, workflow builder, inbox, CRM, A/B tests.", ["typescript", "next.js", "postgres"], "private"),
+    ("FriblLinkedinScraper/", "Threaded LinkedIn profile scraper feeding an AI recruiting pipeline (2024).", ["python"], "archived"),
+]
+
+
+def projects():
+    row_h = 78
+    H = 100 + len(PROJECTS) * row_h + 20
+    rows = ""
+    for i, (name, desc, tags, flag) in enumerate(PROJECTS):
+        y = 100 + i * row_h
+        rows += f'<rect x="56" y="{y}" width="{W-112}" height="{row_h-10}" rx="4" fill="#070b07" stroke="#143614"/>
+'
+        rows += f'<text x="72" y="{y+24}" font-size="15" fill="{G}" filter="url(#glow)">{html.escape(name)}</text>
+'
+        rows += f'<text x="{W-72}" y="{y+24}" font-size="13" fill="{GF}" text-anchor="end">-rwxr-xr-x</text>
+'
+        rows += f'<text x="72" y="{y+44}" font-size="13" fill="{SAGE}">{html.escape(desc)}</text>
+'
+        x = 72
+        for t, col in [(t, GD) for t in tags] + [(flag, AMB)]:
+            w = 16 + len(t) * 8
+            rows += f'<rect x="{x}" y="{y+52}" width="{w}" height="14" rx="3" fill="none" stroke="{col}" stroke-opacity=".7"/>'
+            rows += f'<text x="{x+8}" y="{y+63}" font-size="11" fill="{col}">{html.escape(t)}</text>
+'
+            x += w + 8
+    body = f'''<text class="ui" x="70" y="64" xml:space="preserve"><tspan fill="{SAGE}">magomin~/dev $</tspan> ls -la ~/projects</text>
+<text class="dim" x="70" y="86">&gt; selected work // drwxr-xr-x</text>
+{rows}'''
+    return frame(H, "ls -la ~/projects: selected work", body)
 
 
 def prompt_panel(title, cmd, lines, cursor=False):
@@ -175,15 +227,15 @@ def pill(label):
 </svg>'''
 
 
-PILLS = ["linkedin", "web", "re-track"]
+PILLS = ["linkedin", "web", "re-track", "re-track source", "interactive live", "interactive source", "scraper source"]
 
 
 if __name__ == "__main__":
     import xml.dom.minidom
-    for name, fn in (("header", header), ("whoami", whoami), ("neofetch", neofetch), ("stack", stack), ("contact", contact), ("footer", footer)):
+    for name, fn in (("header", header), ("whoami", whoami), ("neofetch", neofetch), ("stack", stack), ("projects", projects), ("contact", contact), ("footer", footer)):
         svg = fn()
         xml.dom.minidom.parseString(svg.encode())
         pathlib.Path("assets", f"{name}.svg").write_text(svg, encoding="utf-8")
         print("wrote", name)
     for label in PILLS:
-        pathlib.Path("assets", f"pill-{label}.svg").write_text(pill(label), encoding="utf-8")
+        pathlib.Path("assets", f"pill-{label.replace(' ', '-')}.svg").write_text(pill(label), encoding="utf-8")
