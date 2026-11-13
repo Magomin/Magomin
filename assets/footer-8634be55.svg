@@ -13,8 +13,8 @@
 </defs>
 <rect width="1200" height="152" fill="#000000"/><rect width="1200" height="152" fill="url(#wash1)"/>
 <rect x="24" y="24" width="1152" height="104" rx="8" fill="#050805" stroke="#1f4d1f" stroke-width="1.5" filter="url(#glow)"/>
-<text class="ui" x="70" y="64" xml:space="preserve"><tspan fill="#5f8d68">magomin~/dev $</tspan> echo &quot;(c) 2026 Matthieu Dominguez, built with agents, shipped through CI&quot;</text>
-<text x="70" y="96" font-size="15" fill="#5f8d68" xml:space="preserve">(c) 2026 Matthieu Dominguez, built with agents, shipped through CI</text>
+<text class="ui" x="70" y="64" xml:space="preserve"><tspan fill="#5f8d68">magomin~/dev $</tspan> echo &quot;(c) 2026 Matthieu Dominguez, built with AI agents and curiosity&quot;</text>
+<text x="70" y="96" font-size="15" fill="#5f8d68" xml:space="preserve">(c) 2026 Matthieu Dominguez, built with AI agents and curiosity</text>
 <rect class="cur" x="70" y="110" width="9" height="16"/>
 <rect x="24" y="24" width="1152" height="104" rx="8" fill="url(#scan)"/>
 </svg>

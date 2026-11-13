@@ -23,16 +23,16 @@ AVATAR = """▄▄▄▄▄▄▄▄▄▄▄
   ▀▀   ▀▀""".split("\n")
 
 NEOFETCH = [
-    ("OS", "Human (agentic build)"),
+    ("OS", "Human, self-taught build"),
     ("Host", "Cad&Lan, building automation"),
-    ("Role", "Agentic programmer"),
+    ("Role", "Agentic programmer, AI enthusiast"),
     ("Shell", "Claude Code, PowerShell, Git Bash"),
     ("Stack", "Python, TypeScript, Next.js, PostgreSQL"),
-    ("Focus", "agents that ship code with tests and CI"),
+    ("Focus", "turning real problems into tools people use"),
     ("Status", "shipping at Cad&Lan"),
 ]
 
-STACK = [("agents + CI", 90), ("Python", 85), ("TypeScript", 80), ("GitHub Actions", 80),
+STACK = [("AI agents", 90), ("Python", 85), ("TypeScript", 80), ("Git / GitHub", 80),
          ("Next.js / React", 75), ("PostgreSQL", 70), ("Ableton Live", 60)]
 
 
@@ -65,12 +65,12 @@ def header():
             f'<text class="{cls}" style="animation-delay:{0.25+i*0.18:.2f}s" x="70" y="{138+i*32}" xml:space="preserve">{html.escape(l)}</text>'
             for i, l in enumerate(ART))
 
-    tag = "agentic programmer · software built with AI agents, tests and CI"
+    tag = "AI enthusiast · self-taught developer · building real tools with agents"
     style = f'''
   .l {{ font-size: 26px; fill: {INK}; opacity: 0; animation: reveal .01s steps(1) forwards; }} .l.g {{ fill: {G}; }}
   .gl {{ animation: glitch 7s infinite; }} .tag {{ font-size: 18px; fill: {G}; }}
   .amb {{ fill: {AMB}; animation: blink 1.1s steps(1) infinite; }} .sweep {{ animation: sweep 6s linear infinite; }}
-  .typed {{ transform-origin: {W-70}px 0; animation: typing 2.2s steps(64) 1.6s reverse both; }}
+  .typed {{ transform-origin: {W-70}px 0; animation: typing 2.2s steps({len(tag)+2}) 1.6s reverse both; }}
   @keyframes reveal {{ to {{ opacity: 1; }} }}
   @keyframes sweep {{ from {{ transform: translateY(-40px); }} to {{ transform: translateY({H}px); }} }}
   @keyframes typing {{ from {{ transform: scaleX(0); }} to {{ transform: scaleX(1); }} }}
@@ -86,7 +86,7 @@ def header():
 <text class="tag" x="70" y="362" xml:space="preserve" filter="url(#glow)"><tspan fill="{SAGE}">&gt;</tspan> {html.escape(tag)}</text>
 <rect class="typed" x="70" y="344" width="{W-140}" height="26" fill="#050805"/>
 <text class="dim" x="70" y="392" xml:space="preserve">[x] Cad&amp;Lan   [x] re-track   [x] matdomi.vercel.app</text>
-<rect class="cur" x="783" y="348" width="10" height="18"/>
+<rect class="cur" x="{72+round(10.8*(len(tag)+2))}" y="348" width="10" height="18"/>
 <rect class="sweep" x="24" width="{W-48}" height="40" fill="url(#bar)"/>'''
     return frame(H, "MAGOMIN, Matthieu Dominguez, agentic programmer", body, style)
 
@@ -184,12 +184,13 @@ def prompt_panel(title, cmd, lines, cursor=False):
 
 def whoami():
     return prompt_panel("whoami: Matthieu Dominguez, agentic programmer", "whoami --full", [
-        ("Matthieu Dominguez. Agentic programmer: I build software by directing AI agents,", INK),
-        ("with tests and CI as the judge. At Cad&Lan I bring that way of working to a", INK),
-        ("building-automation engineering team and ship the internal tools it needs.", INK),
-        ("Before that, two years in growth and product at an AI recruiting startup.", INK),
+        ("Matthieu Dominguez. AI enthusiast and self-taught developer. I learned to build", INK),
+        ("software by shipping it: directing AI agents, reading what they write and holding", INK),
+        ("the result to real engineering standards. At Cad&Lan I turn the daily problems of", INK),
+        ("a building-automation team into internal tools people actually use. Before that,", INK),
+        ("two years in growth and product at an AI recruiting startup.", INK),
         "",
-        ("[x] Cad&Lan, Spain    [x] shipping since 2024    [x] every PR runs its tests", G),
+        ("[x] Cad&Lan, Spain    [x] building since 2024    [x] self-taught, still learning", G),
     ])
 
 
@@ -202,8 +203,8 @@ def contact():
 
 
 def footer():
-    return prompt_panel("footer", 'echo "(c) 2026 Matthieu Dominguez, built with agents, shipped through CI"', [
-        ("(c) 2026 Matthieu Dominguez, built with agents, shipped through CI", SAGE),
+    return prompt_panel("footer", 'echo "(c) 2026 Matthieu Dominguez, built with AI agents and curiosity"', [
+        ("(c) 2026 Matthieu Dominguez, built with AI agents and curiosity", SAGE),
     ], cursor=True)
 
 
