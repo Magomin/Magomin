@@ -126,9 +126,49 @@ def stack():
     return frame(H, "stack.txt: self-assessed proficiency bars", body)
 
 
+def prompt_panel(title, cmd, lines, cursor=False):
+    """Panel with a prompt line and dim text lines; lines may carry (text, color) tuples."""
+    H = 110 + len(lines) * 22 + (20 if cursor else 0)
+    body = f'''<text class="ui" x="70" y="64" xml:space="preserve"><tspan fill="{SAGE}">magomin~/dev $</tspan> {html.escape(cmd)}</text>
+'''
+    y = 96
+    for ln in lines:
+        text, color = ln if isinstance(ln, tuple) else (ln, SAGE)
+        body += f'<text x="70" y="{y}" font-size="15" fill="{color}" xml:space="preserve">{html.escape(text)}</text>\n'
+        y += 22
+    if cursor:
+        body += f'<rect class="cur" x="70" y="{y-8}" width="9" height="16"/>'
+    return frame(H, title, body)
+
+
+def whoami():
+    return prompt_panel("whoami: Matthieu Dominguez, agentic programmer", "whoami --full", [
+        ("Matthieu Dominguez. Agentic programmer: I build software by directing AI agents,", INK),
+        ("with tests and CI as the judge. At Cad&Lan I bring that way of working to a", INK),
+        ("building-automation engineering team and ship the internal tools it needs.", INK),
+        ("Before that, two years in growth and product at an AI recruiting startup.", INK),
+        "",
+        ("[x] Cad&Lan, Spain    [x] shipping since 2024    [x] every PR runs its tests", G),
+    ])
+
+
+def contact():
+    return prompt_panel("contact: links below", "./contact", [
+        ("-> linkedin   linkedin.com/in/matt-domi", G),
+        ("-> web        matdomi.vercel.app", G),
+        ("-> github     github.com/Magomin", G),
+    ])
+
+
+def footer():
+    return prompt_panel("footer", 'echo "(c) 2026 Matthieu Dominguez, built with agents, shipped through CI"', [
+        ("(c) 2026 Matthieu Dominguez, built with agents, shipped through CI", SAGE),
+    ], cursor=True)
+
+
 if __name__ == "__main__":
     import xml.dom.minidom
-    for name, fn in (("header", header), ("neofetch", neofetch), ("stack", stack)):
+    for name, fn in (("header", header), ("whoami", whoami), ("neofetch", neofetch), ("stack", stack), ("contact", contact), ("footer", footer)):
         svg = fn()
         xml.dom.minidom.parseString(svg.encode())
         pathlib.Path("assets", f"{name}.svg").write_text(svg, encoding="utf-8")
