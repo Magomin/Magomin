@@ -106,18 +106,16 @@ def neofetch():
     sw = "".join(
         f'<rect x="{340+i*30}" y="{112+len(NEOFETCH)*22+2}" width="24" height="12" fill="{c}"/>'
         for i, c in enumerate(["#050805", "#ff5f56", G, AMB, "#5cf6ff", GD, GF, INK]))
-    # walk cycle: the whole figure grows toward the viewer and bobs, feet alternate big steps
+    # idle sway: weight shifts from one foot to the other, figure stays in place
     style = '''
-  .walk, .bob, .lf, .rf { transform-box: fill-box; transform-origin: 50% 100%; }
-  .walk { animation: approach 4s ease-in infinite; }
-  .bob { animation: bob .6s ease-in-out infinite; }
-  .lf { animation: step .6s ease-in-out infinite; }
-  .rf { animation: step .6s ease-in-out -.3s infinite; }
-  @keyframes approach { 0% { transform: scale(.55); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: scale(1.25); opacity: 0; } }
-  @keyframes bob { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-5px) rotate(3deg); } }
-  @keyframes step { 0%,100% { transform: translateY(0) scaleY(1); } 50% { transform: translateY(-14px) scaleY(1.6); } }'''
+  .bob, .lf, .rf { transform-box: fill-box; transform-origin: 50% 100%; }
+  .bob { animation: sway 1.6s ease-in-out infinite; }
+  .lf { animation: lift 1.6s ease-in-out infinite; }
+  .rf { animation: lift 1.6s ease-in-out -.8s infinite; }
+  @keyframes sway { 0%,100% { transform: translateX(-4px) rotate(-2.5deg); } 50% { transform: translateX(4px) rotate(2.5deg); } }
+  @keyframes lift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }'''
     body = f'''<text class="ui" x="70" y="64" xml:space="preserve"><tspan fill="{SAGE}">magomin~/dev $</tspan> neofetch</text>
-<g class="walk" filter="url(#glow)"><g class="bob">{av}</g>{feet}</g>
+<g filter="url(#glow)"><g class="bob">{av}</g>{feet}</g>
 <text x="70" y="{fy+26}" class="dim">magomin@dev</text>
 <text x="340" y="88" font-size="15" fill="{INK}" filter="url(#glow)">magomin@github</text><line x1="340" y1="94" x2="760" y2="94" stroke="{GF}"/>
 {kv}{sw}'''
