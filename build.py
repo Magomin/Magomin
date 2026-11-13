@@ -219,7 +219,7 @@ PILLS = ["linkedin", "web", "re-track"]
 
 if __name__ == "__main__":
     import xml.dom.minidom
-    for name, fn in (("header", header), ("whoami", whoami), ("neofetch", neofetch), ("stack", stack), ("projects", projects), ("contact", contact), ("footer", footer)):
+    for name, fn in (("header", header), ("whoami", whoami), ("neofetch", neofetch), ("stack", stack), ("projects-retrack", projects), ("contact", contact), ("footer", footer)):
         svg = fn()
         xml.dom.minidom.parseString(svg.encode())
         pathlib.Path("assets", f"{name}.svg").write_text(svg, encoding="utf-8")
