@@ -1,20 +1,20 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Matthieu Dominguez, BMS engineer and AI builder" width="100%">
+  <img src="assets/banner.svg" alt="Matthieu Dominguez, agentic programmer" width="100%">
 </p>
 
-### Hi, I'm Matthieu 👋
+### Hi, I'm Matthieu
 
-I work at **Cad&Lan** on building management systems (BMS): control programming, point configuration and integrations, and I build the AI tooling that makes that work faster. Before that I spent two years in growth and product at an AI recruiting startup, where I shipped an internal prospecting platform end to end.
+Agentic programmer: I build software by directing AI agents, with tests and CI as the judge. At **Cad&Lan** I bring that way of working to a building-automation engineering team and ship the internal tools it needs. Before that, two years in growth and product at an AI recruiting startup, where I shipped an internal prospecting platform end to end.
 
-I learn by building. Every project here was written with an AI teacher reviewing each line, and the tests run on every pull request.
+Every project here is written with agents and reviewed line by line. The tests run on every pull request.
 
 ### Now
 
 | | |
 |---|---|
-| 🎛️ [**re-track**](https://github.com/Magomin/re-track) | Learn Ableton Live by rebuilding real songs. AI reverse-engineers a track and turns it into an interactive lesson verified against the live state of your set, not screenshots. Python, early development. |
-| 🏢 **Cad&Lan AI hub** | Internal roadmap and tooling for bringing AI into a BMS engineering team. Private. |
-| 🕹️ [**matdomi.vercel.app**](https://matdomi.vercel.app) | My portfolio as a small 2D world you walk through. React + Kaplay, [source](https://github.com/Magomin/interactive). |
+| [**re-track**](https://github.com/Magomin/re-track) | Learn Ableton Live by rebuilding real songs. AI reverse-engineers a track and turns it into an interactive lesson verified against the live state of your set, not screenshots. Python. Early development. |
+| **Cad&Lan AI hub** | Internal roadmap and tooling for bringing AI agents into an engineering team. Private. |
+| [**matdomi.vercel.app**](https://matdomi.vercel.app) | My portfolio as a small 2D world you walk through. React + Kaplay, [source](https://github.com/Magomin/interactive). |
 
 ### Earlier
 
