@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="MAGOMIN, Matthieu Dominguez, agentic programmer">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="MAGOMIN, Matthieu Dominguez, agentic programmer">
 <style>
   text { font-family: 'Cascadia Code','Fira Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
-  .l { font-size: 17px; fill: #e8fdff; opacity: 0; animation: reveal .01s steps(1) forwards; }
+  .l { font-size: 26px; fill: #e8fdff; opacity: 0; animation: reveal .01s steps(1) forwards; }
   .l.c { fill: #05d9e8; } .l.m { fill: #ff2a6d; }
   .gc { animation: glitchc 7s infinite; } .gm { animation: glitchm 7s infinite; }
   .ui { font-size: 15px; fill: #05d9e8; }
@@ -11,7 +11,7 @@
   .sweep { animation: sweep 5s linear infinite; }
   @keyframes reveal { to { opacity: 1; } }
   @keyframes blink { 50% { opacity: 0; } }
-  @keyframes sweep { from { transform: translateY(-40px); } to { transform: translateY(360px); } }
+  @keyframes sweep { from { transform: translateY(-40px); } to { transform: translateY(430px); } }
   @keyframes typing { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   @keyframes glitchc { 0%,86%,100% { transform: translate(0,0); opacity:0; } 87% { transform: translate(-4px,1px); opacity:.9; } 89% { transform: translate(3px,-1px); opacity:.9; } 91% { transform: translate(-2px,0); opacity:.7; } 93% { transform: translate(0,0); opacity:0; } }
   @keyframes glitchm { 0%,86%,100% { transform: translate(0,0); opacity:0; } 87% { transform: translate(4px,-1px); opacity:.9; } 89% { transform: translate(-3px,1px); opacity:.9; } 91% { transform: translate(2px,0); opacity:.7; } 93% { transform: translate(0,0); opacity:0; } }
@@ -23,37 +23,37 @@
   <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05d9e8" stop-opacity="0"/><stop offset=".5" stop-color="#05d9e8" stop-opacity=".16"/><stop offset="1" stop-color="#05d9e8" stop-opacity="0"/></linearGradient>
   <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<rect width="1200" height="360" fill="#07070f"/>
-<rect width="1200" height="360" fill="url(#grid)"/>
-<rect x="24" y="24" width="1152" height="312" rx="8" fill="#0b0b18" stroke="#ff2a6d" stroke-opacity=".8" stroke-width="1.5" filter="url(#glow)"/>
+<rect width="1200" height="430" fill="#07070f"/>
+<rect width="1200" height="430" fill="url(#grid)"/>
+<rect x="24" y="24" width="1152" height="382" rx="8" fill="#0b0b18" stroke="#ff2a6d" stroke-opacity=".8" stroke-width="1.5" filter="url(#glow)"/>
 <rect x="24" y="24" width="1152" height="34" rx="8" fill="#12122a"/>
 <circle cx="48" cy="41" r="6" fill="#ff2a6d"/><circle cx="68" cy="41" r="6" fill="#f9f002"/><circle cx="88" cy="41" r="6" fill="#05d9e8"/>
 <text class="dim" x="110" y="46">magomin@github:~</text>
 <text class="ui" x="70" y="88" xml:space="preserve">$ ./whoami --neon</text>
-<g class="gc" filter="url(#glow)"><text class="l c" style="animation-delay:0.25s" x="70" y="128" xml:space="preserve">███╗   ███╗ █████╗  ██████╗  ██████╗ ███╗   ███╗██╗███╗   ██╗</text>
-<text class="l c" style="animation-delay:0.43s" x="70" y="150" xml:space="preserve">████╗ ████║██╔══██╗██╔════╝ ██╔═══██╗████╗ ████║██║████╗  ██║</text>
-<text class="l c" style="animation-delay:0.61s" x="70" y="172" xml:space="preserve">██╔████╔██║███████║██║  ███╗██║   ██║██╔████╔██║██║██╔██╗ ██║</text>
-<text class="l c" style="animation-delay:0.79s" x="70" y="194" xml:space="preserve">██║╚██╔╝██║██╔══██║██║   ██║██║   ██║██║╚██╔╝██║██║██║╚██╗██║</text>
-<text class="l c" style="animation-delay:0.97s" x="70" y="216" xml:space="preserve">██║ ╚═╝ ██║██║  ██║╚██████╔╝╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║</text>
-<text class="l c" style="animation-delay:1.15s" x="70" y="238" xml:space="preserve">╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝</text></g>
-<g class="gm" filter="url(#glow)"><text class="l m" style="animation-delay:0.25s" x="70" y="128" xml:space="preserve">███╗   ███╗ █████╗  ██████╗  ██████╗ ███╗   ███╗██╗███╗   ██╗</text>
-<text class="l m" style="animation-delay:0.43s" x="70" y="150" xml:space="preserve">████╗ ████║██╔══██╗██╔════╝ ██╔═══██╗████╗ ████║██║████╗  ██║</text>
-<text class="l m" style="animation-delay:0.61s" x="70" y="172" xml:space="preserve">██╔████╔██║███████║██║  ███╗██║   ██║██╔████╔██║██║██╔██╗ ██║</text>
-<text class="l m" style="animation-delay:0.79s" x="70" y="194" xml:space="preserve">██║╚██╔╝██║██╔══██║██║   ██║██║   ██║██║╚██╔╝██║██║██║╚██╗██║</text>
-<text class="l m" style="animation-delay:0.97s" x="70" y="216" xml:space="preserve">██║ ╚═╝ ██║██║  ██║╚██████╔╝╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║</text>
-<text class="l m" style="animation-delay:1.15s" x="70" y="238" xml:space="preserve">╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝</text></g>
-<g filter="url(#glow)"><text class="l" style="animation-delay:0.25s" x="70" y="128" xml:space="preserve">███╗   ███╗ █████╗  ██████╗  ██████╗ ███╗   ███╗██╗███╗   ██╗</text>
-<text class="l" style="animation-delay:0.43s" x="70" y="150" xml:space="preserve">████╗ ████║██╔══██╗██╔════╝ ██╔═══██╗████╗ ████║██║████╗  ██║</text>
-<text class="l" style="animation-delay:0.61s" x="70" y="172" xml:space="preserve">██╔████╔██║███████║██║  ███╗██║   ██║██╔████╔██║██║██╔██╗ ██║</text>
-<text class="l" style="animation-delay:0.79s" x="70" y="194" xml:space="preserve">██║╚██╔╝██║██╔══██║██║   ██║██║   ██║██║╚██╔╝██║██║██║╚██╗██║</text>
-<text class="l" style="animation-delay:0.97s" x="70" y="216" xml:space="preserve">██║ ╚═╝ ██║██║  ██║╚██████╔╝╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║</text>
-<text class="l" style="animation-delay:1.15s" x="70" y="238" xml:space="preserve">╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝</text></g>
+<g class="gc" filter="url(#glow)"><text class="l c" style="animation-delay:0.25s" x="70" y="138" xml:space="preserve">███╗   ███╗ █████╗  ██████╗  ██████╗ ███╗   ███╗██╗███╗   ██╗</text>
+<text class="l c" style="animation-delay:0.43s" x="70" y="170" xml:space="preserve">████╗ ████║██╔══██╗██╔════╝ ██╔═══██╗████╗ ████║██║████╗  ██║</text>
+<text class="l c" style="animation-delay:0.61s" x="70" y="202" xml:space="preserve">██╔████╔██║███████║██║  ███╗██║   ██║██╔████╔██║██║██╔██╗ ██║</text>
+<text class="l c" style="animation-delay:0.79s" x="70" y="234" xml:space="preserve">██║╚██╔╝██║██╔══██║██║   ██║██║   ██║██║╚██╔╝██║██║██║╚██╗██║</text>
+<text class="l c" style="animation-delay:0.97s" x="70" y="266" xml:space="preserve">██║ ╚═╝ ██║██║  ██║╚██████╔╝╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║</text>
+<text class="l c" style="animation-delay:1.15s" x="70" y="298" xml:space="preserve">╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝</text></g>
+<g class="gm" filter="url(#glow)"><text class="l m" style="animation-delay:0.25s" x="70" y="138" xml:space="preserve">███╗   ███╗ █████╗  ██████╗  ██████╗ ███╗   ███╗██╗███╗   ██╗</text>
+<text class="l m" style="animation-delay:0.43s" x="70" y="170" xml:space="preserve">████╗ ████║██╔══██╗██╔════╝ ██╔═══██╗████╗ ████║██║████╗  ██║</text>
+<text class="l m" style="animation-delay:0.61s" x="70" y="202" xml:space="preserve">██╔████╔██║███████║██║  ███╗██║   ██║██╔████╔██║██║██╔██╗ ██║</text>
+<text class="l m" style="animation-delay:0.79s" x="70" y="234" xml:space="preserve">██║╚██╔╝██║██╔══██║██║   ██║██║   ██║██║╚██╔╝██║██║██║╚██╗██║</text>
+<text class="l m" style="animation-delay:0.97s" x="70" y="266" xml:space="preserve">██║ ╚═╝ ██║██║  ██║╚██████╔╝╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║</text>
+<text class="l m" style="animation-delay:1.15s" x="70" y="298" xml:space="preserve">╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝</text></g>
+<g filter="url(#glow)"><text class="l" style="animation-delay:0.25s" x="70" y="138" xml:space="preserve">███╗   ███╗ █████╗  ██████╗  ██████╗ ███╗   ███╗██╗███╗   ██╗</text>
+<text class="l" style="animation-delay:0.43s" x="70" y="170" xml:space="preserve">████╗ ████║██╔══██╗██╔════╝ ██╔═══██╗████╗ ████║██║████╗  ██║</text>
+<text class="l" style="animation-delay:0.61s" x="70" y="202" xml:space="preserve">██╔████╔██║███████║██║  ███╗██║   ██║██╔████╔██║██║██╔██╗ ██║</text>
+<text class="l" style="animation-delay:0.79s" x="70" y="234" xml:space="preserve">██║╚██╔╝██║██╔══██║██║   ██║██║   ██║██║╚██╔╝██║██║██║╚██╗██║</text>
+<text class="l" style="animation-delay:0.97s" x="70" y="266" xml:space="preserve">██║ ╚═╝ ██║██║  ██║╚██████╔╝╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║</text>
+<text class="l" style="animation-delay:1.15s" x="70" y="298" xml:space="preserve">╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝</text></g>
 <g>
-  <text class="tag" x="70" y="290" xml:space="preserve">&gt; agentic programmer · software built with AI agents, tests and CI</text>
-  <rect class="typed" x="70" y="272" width="1060" height="26" fill="#0b0b18" style="transform-origin: 1130px 0; animation-direction: reverse"/>
+  <text class="tag" x="70" y="362" xml:space="preserve">&gt; agentic programmer · software built with AI agents, tests and CI</text>
+  <rect class="typed" x="70" y="344" width="1060" height="26" fill="#0b0b18" style="transform-origin: 1130px 0; animation-direction: reverse"/>
 </g>
-<text class="dim" x="70" y="318" xml:space="preserve">Cad&amp;Lan · re-track · matdomi.vercel.app</text>
-<rect class="cur" x="783" y="276" width="10" height="18"/>
+<text class="dim" x="70" y="392" xml:space="preserve">Cad&amp;Lan · re-track · matdomi.vercel.app</text>
+<rect class="cur" x="783" y="348" width="10" height="18"/>
 <rect class="sweep" x="24" width="1152" height="40" fill="url(#bar)"/>
-<rect x="24" y="24" width="1152" height="312" rx="8" fill="url(#scan)"/>
+<rect x="24" y="24" width="1152" height="382" rx="8" fill="url(#scan)"/>
 </svg>
