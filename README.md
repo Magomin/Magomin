@@ -42,4 +42,4 @@ Before that, two years in growth and product at an AI recruiting startup.
 
 ### // LINKS
 
-`linkedin` [matt-domi](https://www.linkedin.com/in/matt-domi/) · `web` [matdomi.vercel.app](https://matdomi.vercel.app) · `mail` dominguez.matthieu.b@gmail.com
+`linkedin` [matt-domi](https://www.linkedin.com/in/matt-domi/) · `web` [matdomi.vercel.app](https://matdomi.vercel.app)
