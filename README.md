@@ -12,21 +12,7 @@ Before that, two years in growth and product at an AI recruiting startup.
 [x] Cad&Lan, Spain   [x] shipping since 2024   [x] every PR runs its tests
 ```
 
-```
-magomin~/dev $ neofetch
-
-   ▄▄▄▄▄▄▄▄▄▄▄     magomin@github
-   █ ▄▄▄ ▄▄▄ █     ---------------------------------
-   █ █ █ █ █ █     OS       Human (agentic build)
-   █ █▄█ █▄█ █     Host     Cad&Lan, building automation
-   █         █     Role     Agentic programmer
-   █  ▀▀▀▀▀  █     Shell    Claude Code, PowerShell, Git Bash
-   █▄▄▄▄▄▄▄▄▄█     Stack    Python, TypeScript, Next.js, PostgreSQL
-     ▀▀   ▀▀       Focus    agents that ship code with tests and CI
-                   Status   shipping at Cad&Lan
-
-   ███ ███ ███ ███ ███ ███ ███ ███
-```
+<img src="assets/neofetch.svg" alt="neofetch: identity card" width="100%">
 
 #### `magomin~/dev $ ls -la ~/projects`
 
@@ -38,17 +24,7 @@ magomin~/dev $ neofetch
 | **fribl-outbound/** | B2B multichannel prospecting platform built solo in 2026: sequences, workflow builder, unified inbox, CRM, A/B tests. | `typescript` `next.js` `postgres` `private` | |
 | **FriblLinkedinScraper/** | Threaded LinkedIn profile scraper feeding an AI recruiting pipeline (2024). | `python` `archived` | [-> source](https://github.com/Magomin/FriblLinkedinScraper) |
 
-```
-magomin~/dev $ cat stack.txt | sort -r
-
-agents + CI      [██████████████████░░]  90%
-Python           [█████████████████░░░]  85%
-TypeScript       [████████████████░░░░]  80%
-GitHub Actions   [████████████████░░░░]  80%
-Next.js / React  [███████████████░░░░░]  75%
-PostgreSQL       [██████████████░░░░░░]  70%
-Ableton Live     [████████████░░░░░░░░]  60%
-```
+<img src="assets/stack.svg" alt="stack.txt: self-assessed proficiency bars" width="100%">
 
 ```
 magomin~/dev $ ./contact
