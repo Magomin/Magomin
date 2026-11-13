@@ -94,15 +94,13 @@ def header():
 def neofetch():
     H = 300
     body_lines = AVATAR[:-1]
-    av = "
-".join(
+    av = "\n".join(
         f'<text x="70" y="{112+i*20}" font-size="17" fill="{G}" xml:space="preserve">{html.escape(l)}</text>'
         for i, l in enumerate(body_lines))
     fy = 112 + len(body_lines) * 20
     feet = (f'<g class="lf"><text x="70" y="{fy}" font-size="17" fill="{G}" xml:space="preserve">  ▀▀</text></g>'
             f'<g class="rf"><text x="70" y="{fy}" font-size="17" fill="{G}" xml:space="preserve">       ▀▀</text></g>')
-    kv = "
-".join(
+    kv = "\n".join(
         f'<text x="340" y="{112+i*22}" font-size="15" xml:space="preserve"><tspan fill="{G}">{k:<8}</tspan><tspan fill="{AMB if k == "Status" else SAGE}">{html.escape(v)}</tspan></text>'
         for i, (k, v) in enumerate(NEOFETCH))
     sw = "".join(
@@ -157,20 +155,15 @@ def projects():
     rows = ""
     for i, (name, desc, tags, flag) in enumerate(PROJECTS):
         y = 100 + i * row_h
-        rows += f'<rect x="56" y="{y}" width="{W-112}" height="{row_h-10}" rx="4" fill="#070b07" stroke="#143614"/>
-'
-        rows += f'<text x="72" y="{y+24}" font-size="15" fill="{G}" filter="url(#glow)">{html.escape(name)}</text>
-'
-        rows += f'<text x="{W-72}" y="{y+24}" font-size="13" fill="{GF}" text-anchor="end">-rwxr-xr-x</text>
-'
-        rows += f'<text x="72" y="{y+44}" font-size="13" fill="{SAGE}">{html.escape(desc)}</text>
-'
+        rows += f'<rect x="56" y="{y}" width="{W-112}" height="{row_h-10}" rx="4" fill="#070b07" stroke="#143614"/>\n'
+        rows += f'<text x="72" y="{y+24}" font-size="15" fill="{G}" filter="url(#glow)">{html.escape(name)}</text>\n'
+        rows += f'<text x="{W-72}" y="{y+24}" font-size="13" fill="{GF}" text-anchor="end">-rwxr-xr-x</text>\n'
+        rows += f'<text x="72" y="{y+44}" font-size="13" fill="{SAGE}">{html.escape(desc)}</text>\n'
         x = 72
         for t, col in [(t, GD) for t in tags] + [(flag, AMB)]:
             w = 16 + len(t) * 8
             rows += f'<rect x="{x}" y="{y+52}" width="{w}" height="14" rx="3" fill="none" stroke="{col}" stroke-opacity=".7"/>'
-            rows += f'<text x="{x+8}" y="{y+63}" font-size="11" fill="{col}">{html.escape(t)}</text>
-'
+            rows += f'<text x="{x+8}" y="{y+63}" font-size="11" fill="{col}">{html.escape(t)}</text>\n'
             x += w + 8
     body = f'''<text class="ui" x="70" y="64" xml:space="preserve"><tspan fill="{SAGE}">magomin~/dev $</tspan> ls -la ~/projects</text>
 <text class="dim" x="70" y="86">&gt; selected work // drwxr-xr-x</text>

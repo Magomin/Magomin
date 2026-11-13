@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="510" viewBox="0 0 1200 510" role="img" aria-label="ls -la ~/projects: selected work">
+<style>
+  text { font-family: 'JetBrains Mono','IBM Plex Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+  .ui { font-size: 15px; fill: #39ff7a; } .dim { font-size: 13px; fill: #5f8d68; }
+  .cur { fill: #39ff7a; animation: blink 1.1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  
+</style>
+<defs>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" y="3" fill="#000" fill-opacity=".45"/></pattern>
+  <radialGradient id="wash1" cx="1" cy="0" r="0.9"><stop offset="0" stop-color="#39ff7a" stop-opacity=".10"/><stop offset="1" stop-color="#39ff7a" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-5%" y="-20%" width="110%" height="140%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="510" fill="#000000"/><rect width="1200" height="510" fill="url(#wash1)"/>
+<rect x="24" y="24" width="1152" height="462" rx="8" fill="#050805" stroke="#1f4d1f" stroke-width="1.5" filter="url(#glow)"/>
+<text class="ui" x="70" y="64" xml:space="preserve"><tspan fill="#5f8d68">magomin~/dev $</tspan> ls -la ~/projects</text>
+<text class="dim" x="70" y="86">&gt; selected work // drwxr-xr-x</text>
+<rect x="56" y="100" width="1088" height="68" rx="4" fill="#070b07" stroke="#143614"/>
+<text x="72" y="124" font-size="15" fill="#39ff7a" filter="url(#glow)">re-track/</text>
+<text x="1128" y="124" font-size="13" fill="#1c7a3c" text-anchor="end">-rwxr-xr-x</text>
+<text x="72" y="144" font-size="13" fill="#5f8d68">Learn Ableton Live by rebuilding real songs. AI reverse-engineers a track into a lesson verified against your live set.</text>
+<rect x="72" y="152" width="64" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="80" y="163" font-size="11" fill="#2bbf5c">python</text>
+<rect x="144" y="152" width="72" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="152" y="163" font-size="11" fill="#2bbf5c">ableton</text>
+<rect x="224" y="152" width="104" height="14" rx="3" fill="none" stroke="#ffd24a" stroke-opacity=".7"/><text x="232" y="163" font-size="11" fill="#ffd24a">open source</text>
+<rect x="56" y="178" width="1088" height="68" rx="4" fill="#070b07" stroke="#143614"/>
+<text x="72" y="202" font-size="15" fill="#39ff7a" filter="url(#glow)">cadlan-ai-hub/</text>
+<text x="1128" y="202" font-size="13" fill="#1c7a3c" text-anchor="end">-rwxr-xr-x</text>
+<text x="72" y="222" font-size="13" fill="#5f8d68">Internal roadmap and tooling for bringing AI agents into an engineering team.</text>
+<rect x="72" y="230" width="72" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="80" y="241" font-size="11" fill="#2bbf5c">next.js</text>
+<rect x="152" y="230" width="64" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="160" y="241" font-size="11" fill="#2bbf5c">vercel</text>
+<rect x="224" y="230" width="72" height="14" rx="3" fill="none" stroke="#ffd24a" stroke-opacity=".7"/><text x="232" y="241" font-size="11" fill="#ffd24a">private</text>
+<rect x="56" y="256" width="1088" height="68" rx="4" fill="#070b07" stroke="#143614"/>
+<text x="72" y="280" font-size="15" fill="#39ff7a" filter="url(#glow)">interactive/</text>
+<text x="1128" y="280" font-size="13" fill="#1c7a3c" text-anchor="end">-rwxr-xr-x</text>
+<text x="72" y="300" font-size="13" fill="#5f8d68">My portfolio as a small 2D world you walk through.</text>
+<rect x="72" y="308" width="56" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="80" y="319" font-size="11" fill="#2bbf5c">react</text>
+<rect x="136" y="308" width="64" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="144" y="319" font-size="11" fill="#2bbf5c">kaplay</text>
+<rect x="208" y="308" width="48" height="14" rx="3" fill="none" stroke="#ffd24a" stroke-opacity=".7"/><text x="216" y="319" font-size="11" fill="#ffd24a">live</text>
+<rect x="56" y="334" width="1088" height="68" rx="4" fill="#070b07" stroke="#143614"/>
+<text x="72" y="358" font-size="15" fill="#39ff7a" filter="url(#glow)">fribl-outbound/</text>
+<text x="1128" y="358" font-size="13" fill="#1c7a3c" text-anchor="end">-rwxr-xr-x</text>
+<text x="72" y="378" font-size="13" fill="#5f8d68">B2B multichannel prospecting platform built solo in 2026: sequences, workflow builder, inbox, CRM, A/B tests.</text>
+<rect x="72" y="386" width="96" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="80" y="397" font-size="11" fill="#2bbf5c">typescript</text>
+<rect x="176" y="386" width="72" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="184" y="397" font-size="11" fill="#2bbf5c">next.js</text>
+<rect x="256" y="386" width="80" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="264" y="397" font-size="11" fill="#2bbf5c">postgres</text>
+<rect x="344" y="386" width="72" height="14" rx="3" fill="none" stroke="#ffd24a" stroke-opacity=".7"/><text x="352" y="397" font-size="11" fill="#ffd24a">private</text>
+<rect x="56" y="412" width="1088" height="68" rx="4" fill="#070b07" stroke="#143614"/>
+<text x="72" y="436" font-size="15" fill="#39ff7a" filter="url(#glow)">FriblLinkedinScraper/</text>
+<text x="1128" y="436" font-size="13" fill="#1c7a3c" text-anchor="end">-rwxr-xr-x</text>
+<text x="72" y="456" font-size="13" fill="#5f8d68">Threaded LinkedIn profile scraper feeding an AI recruiting pipeline (2024).</text>
+<rect x="72" y="464" width="64" height="14" rx="3" fill="none" stroke="#2bbf5c" stroke-opacity=".7"/><text x="80" y="475" font-size="11" fill="#2bbf5c">python</text>
+<rect x="144" y="464" width="80" height="14" rx="3" fill="none" stroke="#ffd24a" stroke-opacity=".7"/><text x="152" y="475" font-size="11" fill="#ffd24a">archived</text>
+
+<rect x="24" y="24" width="1152" height="462" rx="8" fill="url(#scan)"/>
+</svg>
