@@ -6,12 +6,7 @@
 
 <img src="assets/neofetch.svg" alt="neofetch: identity card" width="100%">
 
-<img src="assets/projects.svg" alt="ls -la ~/projects: selected work" width="100%">
-
-<a href="https://github.com/Magomin/re-track"><img src="assets/pill-re-track-source.svg" alt="re-track source"></a>
-<a href="https://matdomi.vercel.app"><img src="assets/pill-interactive-live.svg" alt="interactive live"></a>
-<a href="https://github.com/Magomin/interactive"><img src="assets/pill-interactive-source.svg" alt="interactive source"></a>
-<a href="https://github.com/Magomin/FriblLinkedinScraper"><img src="assets/pill-scraper-source.svg" alt="scraper source"></a>
+<a href="https://github.com/Magomin/re-track"><img src="assets/projects.svg" alt="ls -la ~/projects: re-track" width="100%"></a>
 
 <img src="assets/stack.svg" alt="stack.txt: self-assessed proficiency bars" width="100%">
 

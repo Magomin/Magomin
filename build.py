@@ -139,11 +139,7 @@ def stack():
 
 
 PROJECTS = [
-    ("re-track/", "Learn Ableton Live by rebuilding real songs. AI reverse-engineers a track into a lesson verified against your live set.", ["python", "ableton"], "open source"),
-    ("cadlan-ai-hub/", "Internal roadmap and tooling for bringing AI agents into an engineering team.", ["next.js", "vercel"], "private"),
-    ("interactive/", "My portfolio as a small 2D world you walk through.", ["react", "kaplay"], "live"),
-    ("fribl-outbound/", "B2B multichannel prospecting platform built solo in 2026: sequences, workflow builder, inbox, CRM, A/B tests.", ["typescript", "next.js", "postgres"], "private"),
-    ("FriblLinkedinScraper/", "Threaded LinkedIn profile scraper feeding an AI recruiting pipeline (2024).", ["python"], "archived"),
+    ("re-track/", "Learn Ableton Live by rebuilding real songs. AI reverse-engineers a track into a lesson verified against your live set.  -> github.com/Magomin/re-track", ["python", "ableton", "early development"], "open source"),
 ]
 
 
@@ -164,7 +160,7 @@ def projects():
             rows += f'<text x="{x+8}" y="{y+63}" font-size="11" fill="{col}">{html.escape(t)}</text>\n'
             x += w + 8
     body = f'''<text class="ui" x="70" y="64" xml:space="preserve"><tspan fill="{SAGE}">magomin~/dev $</tspan> ls -la ~/projects</text>
-<text class="dim" x="70" y="86">&gt; selected work // drwxr-xr-x</text>
+<text class="dim" x="70" y="86">&gt; the open-source one I am building properly // drwxr-xr-x</text>
 {rows}'''
     return frame(H, "ls -la ~/projects: selected work", body)
 
@@ -218,7 +214,7 @@ def pill(label):
 </svg>'''
 
 
-PILLS = ["linkedin", "web", "re-track", "re-track source", "interactive live", "interactive source", "scraper source"]
+PILLS = ["linkedin", "web", "re-track"]
 
 
 if __name__ == "__main__":
