@@ -3,43 +3,66 @@
 </p>
 
 ```
-> whoami
+magomin~/dev $ whoami --full
 Matthieu Dominguez. Agentic programmer: I build software by directing AI agents,
 with tests and CI as the judge. At Cad&Lan I bring that way of working to a
 building-automation engineering team and ship the internal tools it needs.
 Before that, two years in growth and product at an AI recruiting startup.
+
+[x] Cad&Lan, Spain   [x] shipping since 2024   [x] every PR runs its tests
 ```
 
-### // NOW
+```
+magomin~/dev $ neofetch
 
-| project | what it is | stack |
-|---|---|---|
-| [**re-track**](https://github.com/Magomin/re-track) | Learn Ableton Live by rebuilding real songs. AI reverse-engineers a track and turns it into an interactive lesson verified against the live state of your set, not screenshots. Early development. | Python, Live Remote Script, GitHub Actions |
-| **Cad&Lan AI hub** | Internal roadmap and tooling for bringing AI agents into an engineering team. Private. | Next.js, Vercel |
-| [**matdomi.vercel.app**](https://matdomi.vercel.app) | My portfolio as a small 2D world you walk through. [Source](https://github.com/Magomin/interactive). | React, Kaplay |
+   ▄▄▄▄▄▄▄▄▄▄▄     magomin@github
+   █ ▄▄▄ ▄▄▄ █     ---------------------------------
+   █ █ █ █ █ █     OS       Human (agentic build)
+   █ █▄█ █▄█ █     Host     Cad&Lan, building automation
+   █         █     Role     Agentic programmer
+   █  ▀▀▀▀▀  █     Shell    Claude Code, PowerShell, Git Bash
+   █▄▄▄▄▄▄▄▄▄█     Stack    Python, TypeScript, Next.js, PostgreSQL
+     ▀▀   ▀▀       Focus    agents that ship code with tests and CI
+                   Status   shipping at Cad&Lan
 
-### // EARLIER
+   ███ ███ ███ ███ ███ ███ ███ ███
+```
 
-- **Fribl Outbound** (2026). B2B multichannel prospecting platform built solo: sequences, visual workflow builder, unified inbox, CRM, A/B tests. TypeScript, Next.js, PostgreSQL. Private.
-- [**FriblLinkedinScraper**](https://github.com/Magomin/FriblLinkedinScraper) (2024). Threaded LinkedIn profile scraper feeding an AI recruiting pipeline. Archived.
+#### `magomin~/dev $ ls -la ~/projects`
 
-### // STACK
+| file | description | tags | links |
+|---|---|---|---|
+| **re-track/** | Learn Ableton Live by rebuilding real songs. AI reverse-engineers a track and turns it into an interactive lesson verified against the live state of your set, not screenshots. | `python` `ableton` `open source` | [-> source](https://github.com/Magomin/re-track) |
+| **cadlan-ai-hub/** | Internal roadmap and tooling for bringing AI agents into an engineering team. | `next.js` `vercel` `private` | |
+| **interactive/** | My portfolio as a small 2D world you walk through. | `react` `kaplay` | [-> live](https://matdomi.vercel.app) · [-> source](https://github.com/Magomin/interactive) |
+| **fribl-outbound/** | B2B multichannel prospecting platform built solo in 2026: sequences, workflow builder, unified inbox, CRM, A/B tests. | `typescript` `next.js` `postgres` `private` | |
+| **FriblLinkedinScraper/** | Threaded LinkedIn profile scraper feeding an AI recruiting pipeline (2024). | `python` `archived` | [-> source](https://github.com/Magomin/FriblLinkedinScraper) |
 
-![Python](https://img.shields.io/badge/Python-0b0b18?style=for-the-badge&logo=python&logoColor=05d9e8)
-![TypeScript](https://img.shields.io/badge/TypeScript-0b0b18?style=for-the-badge&logo=typescript&logoColor=05d9e8)
-![Next.js](https://img.shields.io/badge/Next.js-0b0b18?style=for-the-badge&logo=nextdotjs&logoColor=ff2a6d)
-![React](https://img.shields.io/badge/React-0b0b18?style=for-the-badge&logo=react&logoColor=ff2a6d)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0b0b18?style=for-the-badge&logo=postgresql&logoColor=f9f002)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-0b0b18?style=for-the-badge&logo=githubactions&logoColor=f9f002)
-![Claude Code](https://img.shields.io/badge/Claude_Code-0b0b18?style=for-the-badge&logo=anthropic&logoColor=e8fdff)
+```
+magomin~/dev $ cat stack.txt | sort -r
 
-### // SIGNAL
+agents + CI      [██████████████████░░]  90%
+Python           [█████████████████░░░]  85%
+TypeScript       [████████████████░░░░]  80%
+GitHub Actions   [████████████████░░░░]  80%
+Next.js / React  [███████████████░░░░░]  75%
+PostgreSQL       [██████████████░░░░░░]  70%
+Ableton Live     [████████████░░░░░░░░]  60%
+```
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Magomin&show_icons=true&hide_border=true&bg_color=0b0b18&title_color=ff2a6d&icon_color=05d9e8&text_color=e8fdff&hide=contribs&count_private=true" alt="GitHub stats" height="165">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Magomin&layout=compact&hide_border=true&bg_color=0b0b18&title_color=ff2a6d&text_color=e8fdff&langs_count=6" alt="Top languages" height="165">
+```
+magomin~/dev $ ./contact
+
+-> linkedin   https://www.linkedin.com/in/matt-domi/
+-> web        https://matdomi.vercel.app
+-> github     https://github.com/Magomin
+```
+
+<p>
+  <img src="https://img.shields.io/github/last-commit/Magomin/re-track?style=flat-square&label=last%20commit&color=39ff7a&labelColor=050805" alt="last commit">
+  <img src="https://img.shields.io/github/actions/workflow/status/Magomin/re-track/tests.yml?style=flat-square&label=tests&color=39ff7a&labelColor=050805" alt="tests">
 </p>
 
-### // LINKS
-
-`linkedin` [matt-domi](https://www.linkedin.com/in/matt-domi/) · `web` [matdomi.vercel.app](https://matdomi.vercel.app)
+```
+magomin~/dev $ echo "(c) 2026 Matthieu Dominguez, built with agents, shipped through CI" _
+```
