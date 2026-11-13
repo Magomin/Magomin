@@ -20,9 +20,9 @@
 
 <img src="assets/contact.svg" alt="contact" width="100%">
 
-<a href="https://www.linkedin.com/in/matt-domi/"><img src="https://img.shields.io/badge/-%3E%20linkedin-050805?style=for-the-badge&labelColor=050805&color=050805&logoColor=39ff7a" alt="linkedin"></a>
-<a href="https://matdomi.vercel.app"><img src="https://img.shields.io/badge/-%3E%20web-050805?style=for-the-badge&labelColor=050805&color=050805" alt="web"></a>
-<a href="https://github.com/Magomin/re-track"><img src="https://img.shields.io/badge/-%3E%20re--track-050805?style=for-the-badge&labelColor=050805&color=050805" alt="re-track"></a>
+<a href="https://www.linkedin.com/in/matt-domi/"><img src="assets/pill-linkedin.svg" alt="linkedin"></a>
+<a href="https://matdomi.vercel.app"><img src="assets/pill-web.svg" alt="web"></a>
+<a href="https://github.com/Magomin/re-track"><img src="assets/pill-re-track.svg" alt="re-track"></a>
 
 <p>
   <img src="https://img.shields.io/github/last-commit/Magomin/re-track?style=flat-square&label=last%20commit&color=39ff7a&labelColor=050805" alt="last commit">

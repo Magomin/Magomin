@@ -166,6 +166,18 @@ def footer():
     ], cursor=True)
 
 
+def pill(label):
+    """Clickable link pill: wrapped in <a> by the README, since SVG inside <img> cannot link."""
+    w = 40 + len(label) * 9
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="32" viewBox="0 0 {w} 32" role="img" aria-label="{html.escape(label)}">
+<rect x="1" y="1" width="{w-2}" height="30" rx="4" fill="#050805" stroke="#1f4d1f"/>
+<text x="14" y="21" font-family="{MONO}" font-size="14" fill="{G}" xml:space="preserve">-&gt; {html.escape(label)}</text>
+</svg>'''
+
+
+PILLS = ["linkedin", "web", "re-track"]
+
+
 if __name__ == "__main__":
     import xml.dom.minidom
     for name, fn in (("header", header), ("whoami", whoami), ("neofetch", neofetch), ("stack", stack), ("contact", contact), ("footer", footer)):
@@ -173,3 +185,5 @@ if __name__ == "__main__":
         xml.dom.minidom.parseString(svg.encode())
         pathlib.Path("assets", f"{name}.svg").write_text(svg, encoding="utf-8")
         print("wrote", name)
+    for label in PILLS:
+        pathlib.Path("assets", f"pill-{label}.svg").write_text(pill(label), encoding="utf-8")
