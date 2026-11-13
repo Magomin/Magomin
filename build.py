@@ -219,12 +219,29 @@ def pill(label):
 PILLS = ["linkedin", "web", "re-track"]
 
 
+def publish(name, svg, readme):
+    """Write assets/<name>-<hash>.svg and point the README at it.
+
+    GitHub caches images by URL for a long time, so a content hash in the name
+    is what makes an edit show up immediately. Older hashes of the panel are removed.
+    """
+    import hashlib, re
+    h = hashlib.md5(svg.encode()).hexdigest()[:8]
+    for old in pathlib.Path("assets").glob(f"{name}-*.svg"):
+        old.unlink()
+    pathlib.Path("assets", f"{name}-{h}.svg").write_text(svg, encoding="utf-8")
+    return re.sub(rf"assets/{re.escape(name)}(-[0-9a-f]{{8}})?\.svg", f"assets/{name}-{h}.svg", readme)
+
+
 if __name__ == "__main__":
     import xml.dom.minidom
-    for name, fn in (("header", header), ("whoami", whoami), ("neofetch", neofetch), ("stack", stack), ("projects-retrack", projects), ("contact", contact), ("footer", footer)):
+    readme_path = pathlib.Path("README.md")
+    readme = readme_path.read_text(encoding="utf-8")
+    for name, fn in (("header", header), ("whoami", whoami), ("neofetch", neofetch), ("stack", stack), ("projects", projects), ("contact", contact), ("footer", footer)):
         svg = fn()
         xml.dom.minidom.parseString(svg.encode())
-        pathlib.Path("assets", f"{name}.svg").write_text(svg, encoding="utf-8")
+        readme = publish(name, svg, readme)
         print("wrote", name)
     for label in PILLS:
-        pathlib.Path("assets", f"pill-{label.replace(' ', '-')}.svg").write_text(pill(label), encoding="utf-8")
+        readme = publish(f"pill-{label}", pill(label), readme)
+    readme_path.write_text(readme, encoding="utf-8")
